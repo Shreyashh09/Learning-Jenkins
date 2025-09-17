@@ -2,6 +2,9 @@ pipeline {
   agent {
     docker { image 'node:16-alpine' }
   }
+  environment {
+        PATH = "/Users/satishgovindwar/jenkins-docker-bin:/usr/local/bin:/usr/bin:/bin"
+  }
   stages {
     stage('Test') {
       steps {
@@ -10,3 +13,4 @@ pipeline {
     }
   }
 }
+
